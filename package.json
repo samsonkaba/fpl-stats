@@ -1,17 +1,36 @@
 {
   "name": "fpl-stats",
+  "description": "Default navigation bar that hopefully actually works",
   "version": "0.1.0",
-  "private": true,
+  "author": "Max Clayton Clowes <maxcc@me.com>",
+  "main": "build/index.html",
+  "babel": {
+    "presets": [
+      "mcclowes"
+    ]
+  },
   "dependencies": {
-    "codogo-react-scripts": "1.0.14-delta.84",
-    "fpl-api-node": "^2.2.0",
+    "fpl-api-node": "^2.2.4",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
+  "devDependencies": {
+    "mcclowes-scripts": "^0.3.6",
+    "pre-commit": "^1.2.2"
+  },
+  "eslintConfig": {
+    "extends": "mcclowes"
+  },
+  "keywords": [
+    "fpl"
+  ],
+  "license": "MIT",
+  "pre-commit": [
+    "format"
+  ],
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "mcclowes-scripts build",
+    "format": "mcclowes-scripts format",
+    "start": "mcclowes-scripts start"
   }
 }

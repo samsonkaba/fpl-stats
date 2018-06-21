@@ -1,34 +1,15 @@
-// import * as fplapi from 'fpl-api-node';
+//import fplapi from "fpl-api-node"; // why doesn't this work?
+const fplapi = require("fpl-api-node");
 
-// fplapi.getTeams()
-// 	.then((data) => console.log(data));
+// --------------------------------
 
-import codogoFetch from "src/network/codogoFetch";
+//fplapi.findEntry(entryId).then((entry) => console.log(entry));
+fplapi.getTeams().then((data) => console.log(data));
 
-const fetchData = () => {
-	codogoFetch(
-		'https://fantasy.premierleague.com/drf/bootstrap-static', 
-		{
-			method: 'GET',
-		}
-	)
-	.then(
-			(data) => {
-				console.log(data);
-				return data;
-			}
-		)
-		.catch(
-			(error) => {
-				console.error(error);
-			}
-		)
-}
+// --------------------------------
 
-const Data = fetchData();
-
-console.log(Data);
-
-export default () => <div>
-	codogo-react-app
-</div>;
+export default () => (
+	<div>
+		Is the footy on?
+	</div>
+);
